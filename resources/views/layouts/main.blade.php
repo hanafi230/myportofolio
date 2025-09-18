@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Hanafi Abdullah</title>
     @vite('resources/css/app.css')
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
@@ -76,7 +76,6 @@
     style="background-image: url('{{ asset('assets/img/background.jpg') }}')">
 
     <div class="relative h-screen w-screen">
-        <!-- Overlay hujan -->
         <div class="fixed inset-0 overflow-hidden">
             @for ($i = 0; $i < 10; $i++)
                 <div class="absolute top-0 bg-white rounded-sm animate-turun w-[1px] sm:h-12"
@@ -86,9 +85,10 @@
         </div>
 
         <div
-            class="absolute inset-0 flex flex-col md:flex-row items-center justify-center text-center md:text-left space-y-6 md:space-y-0 md:space-x-10 px-4">
-            <div class="max-w-xl fade-in order-2 md:order-1" style="animation-delay: 1s;">
-                <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Turning Ideas into Code — I'm
+            class="absolute inset-0 flex flex-col lg:flex-row items-center justify-center text-center space-y-6  px-4">
+
+            <div class="max-w-xl fade-in order-2 md:order-2 lg:order-1" style="animation-delay: 1s;">
+                <h1 class="text-xl sm:text-2xl md:text-4xl font-bold text-white mb-4">Turning Ideas into Code — I'm
                     Hanafi </h1>
                 <p class="text-sm sm:text-lg md:text-2xl text-gray-200 leading-relaxed">
                     As a Fullstack Developer with strong experience in PHP and Laravel, I design and implement dynamic
@@ -97,12 +97,12 @@
                     frameworks,
                     optimizing system workflows, and delivering solutions that support business growth.
                 </p>
-
             </div>
 
-            <div class="fade-in order-1 md:order-2 w-full md:w-auto flex justify-center" style="animation-delay: 0.5s;">
+            <div class="fade-in order-1 md:order-1 lg:order-2 w-full md:w-auto flex justify-center"
+                style="animation-delay: 0.5s;">
                 <img src="{{ asset('assets/img/avatar.png') }}" alt="avatar"
-                    class="w-40 sm:w-56 md:w-72 lg:w-80 h-auto object-contain">
+                    class="w-50 sm:w-56 md:w-80 lg:w-[500px] h-auto object-contain">
             </div>
         </div>
     </div>
@@ -159,53 +159,54 @@
             $projects = [
                 [
                     '01',
+                    'NEWS PT SCI',
+                    "This newsletter serves as an internal communication platform designed to keep everyone informed, aligned, and engaged. Here, you'll find company updates, departmental highlights, key initiatives, upcoming events, and insights that support our shared goals and values.",
+                    'https://news.ptsci.id/',
+                ],
+                [
+                    '02',
                     'JWALBLI',
                     'Jwalbli is a webcommerce platform for your various types of business, which aims to build and strengthen your brand.',
                     'https://jwalbli.com',
                 ],
                 [
-                    '02',
+                    '03',
                     'SEGARSEGAR',
                     'SegarSegar is an ecommerce platform for selling fresh products such as fruit, vegetables, meat and others.',
                     'https://segarsegar.com',
                 ],
                 [
-                    '03',
+                    '04',
                     'CUCICUCIAN',
                     'Cucicucian is the best platform for creating sophisticated on-demand laundry services.',
                     'https://cucicucian.com',
                 ],
                 [
-                    '04',
+                    '05',
                     'DAYCAREPLATFORM',
                     'DaycarePlatform is an all-in-one platform that simplifies daycare management.',
                     'https://daycareplatform.com',
                 ],
                 [
-                    '05',
+                    '06',
                     'LANVEKSI',
                     'Lanveksi is a platform where you can find and purchase items from the apparel and garment industry that are auctioned directly for sale.',
                     'https://lanveksi.com',
                 ],
-                [
-                    '06',
-                    'NEWS PT SCI',
-                    "This newsletter serves as an internal communication platform designed to keep everyone informed, aligned, and engaged. Here, you'll find company updates, departmental highlights, key initiatives, upcoming events, and insights that support our shared goals and values.",
-                    'https://news.ptsci.id/',
-                ],
+                
             ];
         @endphp
 
         @foreach ($projects as $p)
             <div class="space-y-4 relative text-white/70 hover:text-white">
                 <div
-                    class="grid grid-cols-1 sm:grid-cols-12 gap-4 items-start sm:items-center text-sm sm:text-lg md:text-xl leading-relaxed">
-                    <div class="sm:col-span-1 font-semibold">{{ $p[0] }}</div>
-                    <div class="sm:col-span-3 font-semibold">{{ $p[1] }}</div>
+                    class="sm:h-[100px] grid grid-cols-1 sm:grid-cols-12 gap-6 items-start sm:items-center text-sm sm:text-lg md:text-xl leading-relaxed">
+                    <div class="sm:col-span-1 font-semibold flex justify-center">{{ $p[0] }}</div>
+                    <div class="sm:col-span-3 font-semibold flex justify-center">{{ $p[1] }}</div>
                     <div class="sm:col-span-7">
                         <p>{{ $p[2] }}</p>
                     </div>
-                    <div class="sm:col-span-1 flex sm:justify-center sm:items-center">
+                    <div class="sm:col-span-1 flex justify-center items-center">
                         <a href="{{ $p[3] }}">
                             <i
                                 class="fa-solid fa-arrow-up-right-from-square text-lg sm:text-xl md:text-2xl hover:scale-125 transition-transform duration-300"></i>
@@ -245,11 +246,11 @@
             </div>
             <div class="w-full sm:max-w-[500px] mx-auto">
                 <div id="tab-instagram" class="tab-content">
-                    <iframe class="w-full h-[600px] rounded-lg border border-gray-300 shadow-sm"
+                    <iframe class="w-full h-[600px] rounded-lg border border-gray-300 shadow-sm relative z-50"
                         src="https://www.instagram.com/mashnfi_/embed/" frameborder="0" scrolling="no"></iframe>
                 </div>
                 <div id="tab-linkedin" class="tab-content hidden">
-                    <div class="w-full rounded-lg border border-gray-300 shadow-sm bg-gray-100 font-sans h-[600px]">
+                    <div class="w-full rounded-lg border border-gray-300 shadow-sm bg-gray-100 overflow-y-auto relative z-50 font-sans h-[600px]">
                         <div class="bg-white shadow-md rounded-lg max-w-4xl mx-auto">
                             <div class="relative">
                                 <div class="h-32 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-t-lg"></div>
