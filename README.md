@@ -1,4 +1,4 @@
-## Cara mengunakna My Portofolio
+## Cara Menggunakan My Portofolio
 
 Sebelum memulai projek mungkin yang harus anda persiapkan adalah 
 1. pastikan environment siap, cek dengan 
