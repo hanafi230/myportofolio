@@ -1,0 +1,25 @@
+name: Deploy to Dewaweb
+
+on:
+  push:
+    branches:
+      - main   # workflow akan jalan setiap push ke branch main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v0.1.8
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.PORT }}
+          script: |
+            cd /home/hanafiab   # ganti dengan folder website Anda
+            git pull origin main
