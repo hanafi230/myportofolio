@@ -89,7 +89,7 @@
 
             <div class="max-w-xl fade-in order-2 md:order-2 lg:order-1" style="animation-delay: 1s;">
                 <h1 class="text-xl sm:text-2xl md:text-4xl font-bold text-white mb-4">Turning Ideas into Code — I'm
-                    Hanafi </h1>
+                    Hanafi Abdullah </h1>
                 <p class="text-sm sm:text-lg md:text-2xl text-gray-200 leading-relaxed">
                     As a Fullstack Developer with strong experience in PHP and Laravel, I design and implement dynamic
                     web
