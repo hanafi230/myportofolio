@@ -25,3 +25,5 @@ Sebelum memulai projek mungkin yang harus anda persiapkan adalah
 
 7. jalankan server 
 - php artisan serve
+
+  untuk melihat hasil, bisa kunjungi www.myporto.hanafiabdlh.site
